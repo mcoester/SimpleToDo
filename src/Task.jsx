@@ -16,12 +16,11 @@ function Task({ task, setTask }) {
         });
     }
 
-    {if(task.length === 0){
+    if(task.length === 0){
         return <></>
     } else {
     return(
         task.map(taskItem =>{
-            // console.log(taskItem[2]);
             return(
                 <li className="list-group-item">
                     <div className='row justify-content-start align-items-center'>
@@ -33,19 +32,17 @@ function Task({ task, setTask }) {
                             <button onClick={() =>{
                                 handleDelete(taskItem[0]);
                             }} type="button" className="btn btn-outline-danger btn-size">-</button>
-                            {/* <img className='img-fluid' src='./notDone.png'></img> */}
                         </div>
                         <div className='col-2'>
                             <input onClick={() =>{
                                 handleCheck(taskItem[0]);
-                            }} className="form-check-input" type="checkbox" value="" id="checkDefault"/>                                   
+                            }} className="form-check-input" type="checkbox" value="" checked={taskItem[2]} id="checkDefault"/>                                   
                         </div>
                     </div>
                 </li>
             );
         })
     )
-    }
     }
 }
 

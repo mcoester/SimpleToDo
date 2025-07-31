@@ -10,3 +10,15 @@
 .btn-size {
     width: 2.5rem;
 }
+
+.marginLeft {
+    margin-left: 0.75rem !important;
+}
+
+.titleHeight {
+    height: 2.5rem;
+}
+
+.pointer {
+    cursor: pointer;
+}
